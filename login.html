@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход в систему | OpenEdu Nexus</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-header">
+            <div class="logo" onclick="window.location.href='index.html'">
+                <i class="fas fa-graduation-cap"></i>
+                <span>OpenEdu <strong>Nexus</strong></span>
+            </div>
+            <a href="index.html" class="back-home">
+                <i class="fas fa-arrow-left"></i> На главную
+            </a>
+        </div>
+        
+        <div class="login-content">
+            <div class="login-card" id="loginCard">
+                <div class="card-tabs">
+                    <button class="tab-btn active" data-tab="login">Вход</button>
+                    <button class="tab-btn" data-tab="register">Регистрация</button>
+                </div>
+                
+                <!-- Форма входа -->
+                <form class="auth-form active" id="loginForm">
+                    <h2>Вход в систему</h2>
+                    <p class="form-subtitle">Введите ваши данные для входа</p>
+                    
+                    <div class="form-group">
+                        <label for="loginEmail">Email</label>
+                        <input type="email" id="loginEmail" required placeholder="student@example.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="loginPassword">Пароль</label>
+                        <div class="password-input">
+                            <input type="password" id="loginPassword" required placeholder="Ваш пароль">
+                            <button type="button" class="toggle-password">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="form-options">
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="rememberMe">
+                            <label for="rememberMe">Запомнить меня</label>
+                        </div>
+                        <a href="#" class="forgot-password">Забыли пароль?</a>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary btn-full">
+                        <i class="fas fa-sign-in-alt"></i> Войти
+                    </button>
+                    
+                    <div class="demo-access">
+                        <p>Хотите попробовать демо?</p>
+                        <button type="button" class="btn-secondary btn-full" id="demoAccessBtn">
+                            <i class="fas fa-rocket"></i> Демо-доступ
+                        </button>
+                    </div>
+                </form>
+                
+                <!-- Форма регистрации -->
+                <form class="auth-form" id="registerForm">
+                    <h2>Регистрация</h2>
+                    <p class="form-subtitle">Создайте аккаунт для начала работы</p>
+                    
+                    <div class="form-group">
+                        <label for="regName">Имя и фамилия</label>
+                        <input type="text" id="regName" required placeholder="Айжан Нургалиева">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="regEmail">Email</label>
+                        <input type="email" id="regEmail" required placeholder="example@mail.kz">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="regPassword">Пароль</label>
+                        <div class="password-input">
+                            <input type="password" id="regPassword" required placeholder="Не менее 6 символов">
+                            <button type="button" class="toggle-password">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="regRole">Я регистрируюсь как:</label>
+                        <select id="regRole" required>
+                            <option value="">Выберите роль</option>
+                            <option value="student">Ученик/Абитуриент</option>
+                            <option value="parent">Родитель</option>
+                            <option value="mentor">Ментор/Куратор</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="regAgreement" required>
+                        <label for="regAgreement">
+                            Я соглашаюсь с <a href="#">правилами</a>
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary btn-full">
+                        <i class="fas fa-user-plus"></i> Зарегистрироваться
+                    </button>
+                </form>
+            </div>
+            
+            <!-- Информационный блок -->
+            <div class="login-info">
+                <div class="info-card">
+                    <h3>Почему OpenEdu Nexus?</h3>
+                    <ul class="benefits-list">
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Персональный трекинг</strong>
+                                <p>Отслеживайте прогресс на всех этапах</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Геймификация</strong>
+                                <p>Зарабатывайте баллы и повышайте уровни</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Командная работа</strong>
+                                <p>Работайте вместе с ментором и родителями</p>
+                            </div>
+                        </li>
+                    </ul>
+                    
+                    <div class="testimonial">
+                        <p>"Благодаря OpenEdu Nexus поступил в Cambridge! Платформа сделала процесс понятным."</p>
+                        <div class="testimonial-author">
+                            <div>
+                                <strong>Алишер Каримов</strong>
+                                <span>University of Cambridge, 2024</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Модальное окно выбора демо-режима -->
+        <div class="modal" id="demoModal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Демо-режим</h3>
+                    <button class="modal-close">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p>Выберите роль для демо-доступа:</p>
+                    <div class="demo-roles">
+                        <button class="demo-role-btn" data-role="student">
+                            <i class="fas fa-user-graduate"></i>
+                            <span>Ученик</span>
+                        </button>
+                        <button class="demo-role-btn" data-role="mentor">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                            <span>Ментор</span>
+                        </button>
+                        <button class="demo-role-btn" data-role="parent">
+                            <i class="fas fa-users"></i>
+                            <span>Родитель</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/auth.js"></script>
+    <script src="js/login.js"></script>
+</body>
+</html>

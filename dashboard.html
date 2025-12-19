@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Панель управления | OpenEdu Nexus</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Боковая панель -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo" onclick="window.location.href='index.html'">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>OpenEdu <strong>Nexus</strong></span>
+                </div>
+                <button class="sidebar-toggle" id="sidebarToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            
+            <div class="user-profile">
+                <div class="avatar">
+                    <img src="https://i.pravatar.cc/150?img=32" alt="Аватар" id="userAvatar">
+                    <span class="online-status"></span>
+                </div>
+                <div class="user-info">
+                    <h4 id="userName">Айжан Нургалиева</h4>
+                    <p id="userRole">Ученик • Уровень 12</p>
+                </div>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item active">
+                    <i class="fas fa-home"></i>
+                    <span>Главная</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-road"></i>
+                    <span>Мой путь</span>
+                    <span class="nav-badge">5/8</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-tasks"></i>
+                    <span>Задачи</span>
+                    <span class="nav-badge warning">3</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-university"></i>
+                    <span>Университеты</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-file-alt"></i>
+                    <span>Документы</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-chart-bar"></i>
+                    <span>Аналитика</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-gamepad"></i>
+                    <span>Геймификация</span>
+                    <span class="nav-badge success">+150</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-cog"></i>
+                    <span>Настройки</span>
+                </a>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <div class="xp-progress">
+                    <div class="xp-info">
+                        <small>2,540 XP</small>
+                        <small>3,400 XP</small>
+                    </div>
+                    <div class="xp-bar">
+                        <div class="xp-fill" style="width: 75%"></div>
+                    </div>
+                    <p>До следующего уровня: <strong>860 XP</strong></p>
+                </div>
+                <a href="#" class="btn-logout" id="logoutBtn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Выйти</span>
+                </a>
+            </div>
+        </aside>
+        
+        <!-- Основной контент -->
+        <main class="main-content">
+            <!-- Верхняя панель -->
+            <header class="topbar">
+                <div class="topbar-search">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Поиск по задачам, документам...">
+                </div>
+                
+                <div class="topbar-actions">
+                    <button class="topbar-btn notification-btn">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">4</span>
+                    </button>
+                    <button class="topbar-btn">
+                        <i class="fas fa-calendar-alt"></i>
+                    </button>
+                    <button class="btn-primary btn-small">
+                        <i class="fas fa-plus"></i>
+                        Новая задача
+                    </button>
+                </div>
+            </header>
+            
+            <!-- Приветствие -->
+            <section class="welcome-section">
+                <div class="welcome-content">
+                    <h1>Добро пожаловать, <span id="welcomeName">Айжан</span>! 👋</h1>
+                    <p>Ваше поступление в University of Cambridge на <strong>87%</strong> завершено. Следующий дедлайн: <strong>15 ноября</strong></p>
+                </div>
+                <div class="welcome-actions">
+                    <button class="btn-primary">
+                        <i class="fas fa-play"></i>
+                        Продолжить работу
+                    </button>
+                    <button class="btn-secondary">
+                        <i class="fas fa-comment-alt"></i>
+                        Чат с ментором
+                    </button>
+                </div>
+            </section>
+            
+            <!-- Основная сетка -->
+            <div class="dashboard-grid">
+                <!-- Колонка 1 -->
+                <div class="grid-column">
+                    <!-- Прогресс поступления -->
+                    <div class="card progress-card">
+                        <div class="card-header">
+                            <h3><i class="fas fa-road"></i> Прогресс поступления</h3>
+                            <span class="card-badge success">87%</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="timeline">
+                                <div class="timeline-step completed">
+                                    <div class="step-marker">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                    <div class="step-content">
+                                        <h4>Выбор вуза</h4>
+                                        <p>5 университетов отобрано</p>
+                                        <small>Завершено 12.09.2024</small>
+                                    </div>
+                                </div>
+                                <div class="timeline-step completed">
+                                    <div class="step-marker">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                    <div class="step-content">
+                                        <h4>Подготовка документов</h4>
+                                        <p>Рекомендации, мотивационные письма</p>
+                                        <small>Завершено 05.10.2024</small>
+                                    </div>
+                                </div>
+                                <div class="timeline-step active">
+                                    <div class="step-marker">
+                                        <span class="pulse"></span>
+                                        <i class="fas fa-pen"></i>
+                                    </div>
+                                    <div class="step-content">
+                                        <h4>Экзамены</h4>
+                                        <p>IELTS: 8.0, SAT: 1480</p>
+                                        <small>В процессе • Дедлайн: 15.11.2024</small>
+                                    </div>
+                                </div>
+                                <div class="timeline-step">
+                                    <div class="step-marker">
+                                        <span>4</span>
+                                    </div>
+                                    <div class="step-content">
+                                        <h4>Подача заявок</h4>
+                                        <p>Подготовка к интервью</p>
+                                        <small>Ожидание • Начнется: 20.11.2024</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Геймификация -->
+                    <div class="card gamification-card">
+                        <div class="card-header">
+                            <h3><i class="fas fa-gamepad"></i> Ваш прогресс</h3>
+                            <span class="card-badge">Уровень 12</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="achievements">
+                                <div class="achievement">
+                                    <div class="achievement-icon gold">
+                                        <i class="fas fa-trophy"></i>
+                                    </div>
+                                    <div class="achievement-info">
+                                        <h4>Мастер эссе</h4>
+                                        <p>Написано 10+ эссе</p>
+                                    </div>
+                                </div>
+                                <div class="achievement">
+                                    <div class="achievement-icon silver">
+                                        <i class="fas fa-bolt"></i>
+                                    </div>
+                                    <div class="achievement-info">
+                                        <h4>Скоростник</h4>
+                                        <p>Все задачи выполнены вовремя</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="challenge">
+                                <h4>Текущий челлендж</h4>
+                                <p>Наберите 1000 XP за неделю</p>
+                                <div class="challenge-progress">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 65%"></div>
+                                    </div>
+                                    <span>650/1000 XP</span>
+                                </div>
+                                <button class="btn-secondary btn-small">
+                                    <i class="fas fa-play"></i>
+                                    Продолжить
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Колонка 2 -->
+                <div class="grid-column">
+                    <!-- Предстоящие задачи -->
+                    <div class="card tasks-card">
+                        <div class="card-header">
+                            <h3><i class="fas fa-tasks"></i> Предстоящие задачи</h3>
+                            <a href="#" class="card-link">Все задачи</a>
+                        </div>
+                        <div class="card-body">
+                            <div class="task-list">
+                                <div class="task-item priority-high">
+                                    <div class="task-checkbox">
+                                        <input type="checkbox" id="task1">
+                                        <label for="task1"></label>
+                                    </div>
+                                    <div class="task-content">
+                                        <h4>Подготовка к IELTS Speaking</h4>
+                                        <p>Сессия с ментором • 2 часа</p>
+                                        <div class="task-meta">
+                                            <span class="task-tag">
+                                                <i class="fas fa-clock"></i>
+                                                Сегодня, 15:00
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="task-item priority-medium">
+                                    <div class="task-checkbox">
+                                        <input type="checkbox" id="task2">
+                                        <label for="task2"></label>
+                                    </div>
+                                    <div class="task-content">
+                                        <h4>Черновик мотивационного письма</h4>
+                                        <p>Для University of Cambridge</p>
+                                        <div class="task-meta">
+                                            <span class="task-tag">
+                                                <i class="fas fa-clock"></i>
+                                                До 10.11.2024
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="btn-secondary btn-full">
+                                <i class="fas fa-plus"></i>
+                                Добавить задачу
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Команда поддержки -->
+                    <div class="card team-card">
+                        <div class="card-header">
+                            <h3><i class="fas fa-users"></i> Ваша команда</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="team-members">
+                                <div class="member">
+                                    <div class="member-avatar">
+                                        <img src="https://i.pravatar.cc/150?img=8" alt="Ментор">
+                                        <span class="online-status"></span>
+                                    </div>
+                                    <div class="member-info">
+                                        <h4>Асанали Алдунгаров</h4>
+                                        <p>Ментор по поступлению</p>
+                                        <span class="member-status available">Online</span>
+                                    </div>
+                                    <button class="member-action">
+                                        <i class="fas fa-comment"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Колонка 3 -->
+                <div class="grid-column">
+                    <!-- Аналитика прогресса -->
+                    <div class="card analytics-card">
+                        <div class="card-header">
+                            <h3><i class="fas fa-chart-bar"></i> Аналитика прогресса</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="analytics-chart">
+                                <canvas id="progressChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Дедлайны -->
+                    <div class="card deadlines-card">
+                        <div class="card-header">
+                            <h3><i class="fas fa-calendar-alt"></i> Ближайшие дедлайны</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="deadline-item urgent">
+                                <div class="deadline-date">
+                                    <span class="day">31</span>
+                                    <span class="month">Дек</span>
+                                </div>
+                                <div class="deadline-content">
+                                    <h4>IELTS Speaking Test</h4>
+                                    <p>Final preparation session</p>
+                                </div>
+                                <span class="deadline-badge">Через 3 дня</span>
+                            </div>
+                            <div class="deadline-item">
+                                <div class="deadline-date">
+                                    <span class="day">12</span>
+                                    <span class="month">Янв</span>
+                                </div>
+                                <div class="deadline-content">
+                                    <h4>Подача в NU</h4>
+                                    <p>UCAS application deadline</p>
+                                </div>
+                                <span class="deadline-badge">Через 8 дней</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="js/auth.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

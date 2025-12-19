@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenEdu Nexus | Умная платформа поступления</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Навигация -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <div class="logo" onclick="window.location.href='index.html'">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>OpenEdu <strong>Nexus</strong></span>
+                </div>
+            </div>
+            <div class="nav-menu">
+                <a href="#features">Возможности</a>
+                <a href="#how-it-works">Как это работает</a>
+                <a href="#testimonials">Отзывы</a>
+                <a href="login.html?action=login" class="btn-login">
+                    <i class="fas fa-sign-in-alt"></i> Войти
+                </a>
+                <a href="login.html?action=register" class="btn-primary">
+                    <i class="fas fa-user-plus"></i> Начать бесплатно
+                </a>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Герой-секция -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Ваш персональный <span class="highlight">навигатор</span> к образованию за рубежом</h1>
+                <p class="hero-subtitle">Интеллектуальная платформа, которая превращает сложный процесс поступления в организованное и мотивирующее путешествие</p>
+                
+                <div class="hero-actions">
+                    <a href="login.html?action=login" class="btn-primary btn-large">
+                        <i class="fas fa-sign-in-alt"></i> Войти в систему
+                    </a>
+                    <a href="login.html?action=register" class="btn-secondary btn-large">
+                        <i class="fas fa-rocket"></i> Начать бесплатно
+                    </a>
+                </div>
+                
+                <div class="hero-stats">
+                    <div class="stat">
+                        <h3>2,500+</h3>
+                        <p>Учеников уже с нами</p>
+                    </div>
+                    <div class="stat">
+                        <h3>94%</h3>
+                        <p>Успешных поступлений</p>
+                    </div>
+                    <div class="stat">
+                        <h3>350+</h3>
+                        <p>Университетов-партнеров</p>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="dashboard-preview">
+                    <div class="preview-header">
+                        <div class="preview-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <div class="preview-title">Панель прогресса</div>
+                    </div>
+                    <div class="preview-content">
+                        <div class="progress-track">
+                            <div class="track-step completed">
+                                <div class="step-icon">1</div>
+                                <div class="step-info">
+                                    <p>Выбор вуза</p>
+                                    <small>Завершено</small>
+                                </div>
+                            </div>
+                            <div class="track-step completed">
+                                <div class="step-icon">2</div>
+                                <div class="step-info">
+                                    <p>Подготовка документов</p>
+                                    <small>Завершено</small>
+                                </div>
+                            </div>
+                            <div class="track-step active">
+                                <div class="step-icon">3</div>
+                                <div class="step-info">
+                                    <p>Экзамены</p>
+                                    <small>В процессе</small>
+                                </div>
+                            </div>
+                            <div class="track-step">
+                                <div class="step-icon">4</div>
+                                <div class="step-info">
+                                    <p>Подача заявки</p>
+                                    <small>Ожидание</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gamification-preview">
+                            <div class="level-indicator">
+                                <div class="level-icon">
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <div class="level-info">
+                                    <p>Уровень: <strong>Эксперт</strong></p>
+                                    <div class="xp-bar">
+                                        <div class="xp-fill" style="width: 75%"></div>
+                                    </div>
+                                    <small>2,540/3,400 XP</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Возможности -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2 class="section-title">Все, что нужно для успешного поступления</h2>
+            <p class="section-subtitle">OpenEdu Nexus объединяет лучшие инструменты для учеников, менторов и родителей</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-binoculars"></i>
+                    </div>
+                    <h3>Прозрачное сопровождение</h3>
+                    <p>Отслеживайте прогресс на всех этапах поступления в режиме реального времени.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check-circle"></i> Интерактивная временная шкала</li>
+                        <li><i class="fas fa-check-circle"></i> Уведомления о дедлайнах</li>
+                        <li><i class="fas fa-check-circle"></i> Аналитика прогресса</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Персонализированный маркетинг</h3>
+                    <p>AI-анализ данных ученика для формирования индивидуального пути.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check-circle"></i> Интеллектуальные рекомендации</li>
+                        <li><i class="fas fa-check-circle"></i> Адаптивные сценарии</li>
+                        <li><i class="fas fa-check-circle"></i> Прогнозная аналитика</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <h3>Геймификация процесса</h3>
+                    <p>Мотивирующая система достижений, уровней и челленджей.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check-circle"></i> Баллы и достижения</li>
+                        <li><i class="fas fa-check-circle"></i> Уровни подготовки</li>
+                        <li><i class="fas fa-check-circle"></i> Интерактивные челленджи</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Коллаборативная платформа</h3>
+                    <p>Работайте вместе с ментором, получайте обратную связь в едином пространстве.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check-circle"></i> Командная работа</li>
+                        <li><i class="fas fa-check-circle"></i> Обратная связь в реальном времени</li>
+                        <li><i class="fas fa-check-circle"></i> Общие документы и чаты</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Демо-форма -->
+    <section class="demo-form" id="demo-form">
+        <div class="container">
+            <div class="form-container">
+                <div class="form-info">
+                    <h2>Получите демо-доступ к платформе</h2>
+                    <p>Оставьте свои данные, и мы отправим вам доступ к демо-версии OpenEdu Nexus.</p>
+                    <div class="form-benefits">
+                        <div class="benefit">
+                            <i class="fas fa-shield-alt"></i>
+                            <div>
+                                <h4>Безопасность данных</h4>
+                                <p>Все данные защищены шифрованием</p>
+                            </div>
+                        </div>
+                        <div class="benefit">
+                            <i class="fas fa-headset"></i>
+                            <div>
+                                <h4>Поддержка 24/7</h4>
+                                <p>Наша команда всегда на связи</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-content">
+                    <form id="demoRequestForm">
+                        <div class="form-group">
+                            <label for="name">Имя и фамилия *</label>
+                            <input type="text" id="name" required placeholder="Айжан Нургалиева">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" required placeholder="example@mail.kz">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Телефон</label>
+                            <input type="tel" id="phone" placeholder="+7 (777) 123-45-67">
+                        </div>
+                        <div class="form-group">
+                            <label for="role">Вы являетесь:</label>
+                            <select id="role">
+                                <option value="student">Ученик</option>
+                                <option value="parent">Родитель</option>
+                                <option value="mentor">Ментор</option>
+                            </select>
+                        </div>
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="agreement" required>
+                            <label for="agreement">Соглашаюсь с политикой конфиденциальности</label>
+                        </div>
+                        <button type="submit" class="btn-primary btn-full">
+                            <i class="fas fa-paper-plane"></i> Получить демо-доступ
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>OpenEdu <strong>Nexus</strong></span>
+                    </div>
+                    <p>Интеллектуальная платформа для поступления в зарубежные вузы. Казахстан, 2025.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Платформа</h4>
+                        <a href="#">Для учеников</a>
+                        <a href="#">Для менторов</a>
+                        <a href="#">Для родителей</a>
+                    </div>
+                    <div class="link-group">
+                        <h4>Компания</h4>
+                        <a href="#">О нас</a>
+                        <a href="#">Контакты</a>
+                        <a href="#">Карьера</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 OpenEdu model. Все права защищены.</p>
+                <div class="legal-links">
+                    <a href="#">Политика конфиденциальности</a>
+                    <a href="#">Условия использования</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
